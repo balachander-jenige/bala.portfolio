@@ -8,9 +8,8 @@ PORTFOLIO.profile = {
 
   // Each string is one paragraph in "About Me".
   summary: [
-    "My name is Balachander Jenige and I'm an AWS Cloud & DevOps Engineer with 4+ years of experience designing and automating AWS infrastructure using Go, Terraform, CloudFormation, Docker, Kubernetes and CI/CD pipelines.",
-    "I have a track record of reducing cloud costs, improving security posture and automating compliance for enterprise clients at Hitachi Vantara. I'm strongest in automation, AWS security and cloud-native system design. These days I'm also working on MLOps at the NUS Fintech Lab."
-  ],
+    "My name is Balachander Jenige and I'm an AWS Cloud & DevOps Engineer with 3+ years of experience designing and architecting AWS infrastructure using Go, Terraform, CloudFormation, Docker, Kubernetes and CI/CD pipelines."
+
 
   // Shown in the bordered box under "About Me". Set to "" to hide it.
   highlight: "AWS Certified Solutions Architect – Associate · 2× Hitachi \"Night On The Town\" Award",

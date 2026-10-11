@@ -14,7 +14,7 @@ permissions:
   contents: read
 
 env:
-  PROJECT_NAME: portfolio # Cloudflare Pages project name (becomes <name>.pages.dev)
+  PROJECT_NAME: balachander # Cloudflare Pages project name (becomes <name>.pages.dev)
   CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
   CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 

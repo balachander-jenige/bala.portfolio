@@ -1,0 +1,35 @@
+/* Design tokens mirrored from martinheinz.dev (Cactus Dark-style).
+   Change a value here and it updates everywhere. */
+
+:root {
+  /* Colours */
+  --color-bg: #1d1f21;
+  --color-text: #c9cacc;
+  --color-heading: #eee;
+  --color-secondary: #ccc;
+  --color-muted: #666;
+  --color-dim: #333;
+  --color-accent: #2bbc8a;
+  --color-hover: #d480aa;
+  --color-code-bg: #282c34;
+  --color-code-text: #abb2bf;
+  --color-inline-bg: #212326;
+  --color-selection: #3e4451;
+
+  /* Fonts */
+  --font-body: "Oxygen Mono", monospace;
+  --font-code: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+
+  /* Sizing */
+  --font-size-base: 14px;
+  --line-height-base: 1.725;
+  --max-width: 72rem;
+  --content-width: 64rem;
+  --gutter: 2rem;
+  --section-gap: 4rem;
+
+  /* Radii */
+  --radius-sm: 2px;
+  --radius-md: 5px;
+  --radius-code: .3em;
+}

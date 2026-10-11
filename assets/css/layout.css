@@ -1,0 +1,150 @@
+/* Header, main content area and footer */
+
+/* ---------- Header ---------- */
+
+#header {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: var(--section-gap);
+}
+
+#header #logo {
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  margin-right: 2rem;
+  border-radius: var(--radius-md);
+  background: var(--color-code-bg);
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: .05em;
+}
+
+#header #logo:hover {
+  color: var(--color-hover);
+}
+
+#header h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--color-text);
+  letter-spacing: .01em;
+}
+
+#header #nav {
+  color: var(--color-accent);
+  font-size: .8rem;
+  font-weight: 200;
+  letter-spacing: .01em;
+}
+
+#header #nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 15px;
+}
+
+#header #nav ul li {
+  display: inline-block;
+  margin: 0 15px 0 0;
+  padding-right: 15px;
+  border-right: 1px dotted var(--color-accent);
+}
+
+#header #nav ul li:last-child {
+  border-right: 0;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+#header #nav ul a:hover {
+  color: var(--color-text);
+  background-image: linear-gradient(transparent, transparent 5px, var(--color-accent) 5px, var(--color-accent));
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 100% 5px;
+}
+
+@media (max-width: 480px) {
+  #header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #header #logo {
+    margin: 0 0 1rem;
+  }
+
+  #header #nav ul li {
+    margin-right: 8px;
+    padding-right: 8px;
+  }
+}
+
+/* ---------- Content ---------- */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: break-word;
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+  position: relative;
+}
+
+.content section {
+  margin-bottom: 2.5rem;
+  max-width: var(--content-width);
+}
+
+.content section > h2 {
+  position: relative;
+  margin-bottom: .75rem;
+}
+
+.content section > h2::before {
+  content: "#";
+  position: absolute;
+  left: -1rem;
+  color: var(--color-accent);
+}
+
+/* ---------- Footer ---------- */
+
+#footer {
+  color: var(--color-muted);
+  font-size: .8rem;
+  padding: 2rem 0 var(--section-gap);
+  border-top: thin solid var(--color-dim);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+#footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#footer ul li {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+#footer a {
+  color: var(--color-muted);
+}
+
+#footer a:hover {
+  color: var(--color-hover);
+}

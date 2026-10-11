@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Balachander Jenige — AWS Cloud & DevOps Engineer based in Singapore.">
+  <meta name="theme-color" content="#1d1f21">
+  <title>Balachander Jenige | AWS Cloud & DevOps Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&family=Fira+Code&display=swap">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+
+  <header id="header">
+    <a id="logo" href="#" aria-label="Home" data-field="initials">BJ</a>
+    <div>
+      <h1 data-field="name">Balachander Jenige</h1>
+      <nav id="nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Each section's content comes from the file in data/ named in its comment.
+       To add a section: add a <section> here and a matching function in assets/js/sections.js. -->
+  <main class="content">
+
+    <section id="about">
+      <h2>About Me</h2>
+      <div data-render="about"></div> <!-- data/profile.js -->
+    </section>
+
+    <section id="life">
+      <h2>Life so far...</h2>
+      <div data-render="timeline"></div> <!-- data/experience.js + data/education.js -->
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div data-render="experience"></div> <!-- data/experience.js -->
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div data-render="projects"></div> <!-- data/projects.js -->
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div data-render="skills"></div> <!-- data/skills.js -->
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div data-render="education"></div> <!-- data/education.js -->
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <div data-render="certifications"></div> <!-- data/achievements.js -->
+    </section>
+
+    <section id="awards">
+      <h2>Awards &amp; Achievements</h2>
+      <div data-render="awards"></div> <!-- data/achievements.js -->
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div data-render="contact"></div> <!-- data/profile.js -->
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <span>Copyright © <span id="year">2026</span> <span data-field="name">Balachander Jenige</span></span>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://www.linkedin.com/in/balachander-jenige/" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </footer>
+
+  <!-- Content -->
+  <script src="data/profile.js"></script>
+  <script src="data/experience.js"></script>
+  <script src="data/projects.js"></script>
+  <script src="data/skills.js"></script>
+  <script src="data/education.js"></script>
+  <script src="data/achievements.js"></script>
+
+  <!-- Rendering -->
+  <script src="assets/js/helpers.js"></script>
+  <script src="assets/js/sections.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

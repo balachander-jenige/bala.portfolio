@@ -1,0 +1,131 @@
+/* Reusable blocks: highlight box, timeline, entries, tags, skills table */
+
+/* ---------- Highlight box ---------- */
+
+.job {
+  background: var(--color-code-bg);
+  border: 1px dotted var(--color-muted);
+  border-radius: var(--radius-code);
+  color: var(--color-code-text);
+  font-weight: 700;
+  margin: 2rem 0 0;
+  overflow: auto;
+  padding: 1em;
+  text-align: center;
+}
+
+/* ---------- Timeline / post list ---------- */
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list .post-item {
+  margin-bottom: 5px;
+}
+
+.post-list .post-item .meta {
+  color: var(--color-muted);
+  display: block;
+  font-size: 14px;
+  margin-right: 16px;
+  min-width: 100px;
+}
+
+@media (min-width: 480px) {
+  .post-list .post-item {
+    display: flex;
+  }
+
+  .post-list .post-item .meta {
+    text-align: left;
+    flex: 0 0 13rem;
+  }
+}
+
+/* ---------- Experience / project entries ---------- */
+
+.entry {
+  margin-bottom: 1.75rem;
+}
+
+.entry .meta {
+  color: var(--color-muted);
+  font-size: .85rem;
+  margin-bottom: .35rem;
+}
+
+.entry .meta .sep {
+  color: var(--color-accent);
+  margin: 0 .4rem;
+}
+
+.entry ul {
+  margin-top: .25rem;
+}
+/* ---------- Tags ---------- */
+
+.tags {
+  margin: .25rem 0 0;
+}
+
+.content .tag-link {
+  background-image: linear-gradient(transparent, transparent 5px, var(--color-hover) 5px, var(--color-hover));
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 100% 6px;
+}
+
+.tag-link::before {
+  content: " #";
+}
+
+.tag-link::after {
+  content: ", ";
+}
+
+.tag-link:last-child::after {
+  content: "";
+}
+
+/* ---------- Skills table ---------- */
+
+table.skills {
+  border-collapse: collapse;
+  font-size: 12px;
+  width: 100%;
+}
+
+table.skills th,
+table.skills td {
+  padding: 6px 12px 6px 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.skills th {
+  color: var(--color-heading);
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  border-bottom: 1px dashed var(--color-muted);
+}
+
+table.skills td {
+  border-bottom: 1px dashed var(--color-dim);
+}
+
+@media (max-width: 600px) {
+  table.skills th,
+  table.skills td {
+    display: block;
+    border: 0;
+    padding: 0;
+  }
+
+  table.skills th {
+    margin-top: .75rem;
+    border-bottom: 1px dashed var(--color-muted);
+  }
+}

@@ -1,0 +1,151 @@
+/* Reset, typography and links */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-bg);
+}
+
+body {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  line-height: var(--line-height-base);
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-selection);
+}
+
+/* ---------- Headings ---------- */
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: var(--line-height-base);
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: .01em;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  letter-spacing: normal;
+}
+
+h3 {
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  text-decoration: underline;
+  text-decoration-color: var(--color-muted);
+  text-underline-offset: 3px;
+}
+
+h4, h5, h6 {
+  font-size: .8rem;
+  font-weight: 400;
+  color: var(--color-secondary);
+}
+
+/* ---------- Text ---------- */
+
+p {
+  margin: 0 0 1rem;
+}
+
+strong {
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+small {
+  font-size: .85em;
+}
+
+ul, ol, dl {
+  line-height: var(--line-height-base);
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: .25rem;
+}
+
+hr {
+  border: 0;
+  border-top: thin solid var(--color-muted);
+  margin: 2rem 0;
+}
+
+code {
+  font-family: var(--font-body);
+  font-size: 13px;
+  background: var(--color-inline-bg);
+  border-radius: var(--radius-sm);
+  padding: 0 4px;
+  line-height: 22px;
+}
+
+pre code {
+  font-family: var(--font-code);
+}
+
+@media (min-width: 480px) {
+  p {
+    text-align: justify;
+  }
+}
+
+/* ---------- Links (6px gradient underline) ---------- */
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-hover);
+}
+
+.content a {
+  background-image: linear-gradient(transparent, transparent 5px, var(--color-text) 5px, var(--color-text));
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 100% 6px;
+}
+
+.content a:hover {
+  background-image: linear-gradient(transparent, transparent 4px, var(--color-hover) 4px, var(--color-hover));
+}
+
+/* ---------- Helpers ---------- */
+
+.muted {
+  color: var(--color-muted);
+}
+
+.subtitle {
+  color: var(--color-muted);
+  font-size: 1.2em;
+  margin: -4px 0 1rem;
+}

@@ -1,0 +1,53 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # allows a manual run from the Actions tab
+
+# Never run two deploys at once; a newer push cancels an older in-progress one.
+concurrency:
+  group: cloudflare-pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  PROJECT_NAME: portfolio # Cloudflare Pages project name (becomes <name>.pages.dev)
+  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Copy everything except repo-only files into dist/, so new site folders
+      # are picked up automatically without editing this workflow.
+      - name: Collect site files
+        run: |
+          rsync -a ./ dist/ \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude '.claude' \
+            --exclude '.gitignore' \
+            --exclude 'README.md' \
+            --exclude 'dist'
+          find dist -type f | sort
+
+      - name: Create Pages project if missing
+        run: |
+          if npx --yes wrangler@4 pages project list | grep -qw "$PROJECT_NAME"; then
+            echo "Project $PROJECT_NAME exists"
+          else
+            npx --yes wrangler@4 pages project create "$PROJECT_NAME" --production-branch=main
+          fi
+
+      - name: Deploy
+        run: npx --yes wrangler@4 pages deploy dist --project-name="$PROJECT_NAME" --branch="${{ github.ref_name }}"
